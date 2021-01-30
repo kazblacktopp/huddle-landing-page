@@ -1,0 +1,41 @@
+@import "mobstyle.css" screen and (max-width: 768px);
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url("images/bg-desktop.svg");
+  background-color: var(--violet);
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+footer {
+  /* display: inline-block; */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.fab {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  margin: 40px 10px;
+}
