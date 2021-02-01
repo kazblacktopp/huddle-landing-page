@@ -1,15 +1,16 @@
 :root {
-  --soft-magenta-hex: #E882E8;
   --soft-magenta: hsl(300, 69%, 71%);
   --violet: hsl(257, 40%, 49%);
+  --white: hsla(0, 0%, 100%, 0.9);
+  --soft-white: hsla(0, 0%, 100%, 0.7);
 }
 
 .container {
   font-family: 'Open Sans', sans-serif;
   background: var(--violet) url("images/bg-mobile.svg") no-repeat;
-  margin: 0;
   width: 100vw;
   height: 100vh;
+  padding: 0 2.5em;
 }
 
 .intro-section, footer {
@@ -17,37 +18,62 @@
 }
 
 .logo {
-  width: 7.5em;
-  margin: 2.5em;
+  width: 7.813em;
+  margin: 1.875em auto 3.750em -0.313em;
 }
 
-h1 {
+.intro-mockup>img {
+  width: 18.75em;
+}
+
+.intro-text {
+  padding: 3.438em 0.188em 3.125em;
+  line-height: 1.6;
+  letter-spacing: 0.031em;
+}
+
+.intro-text>h1 {
+  font-size: 1.438em; /* 23px */
   font-family: 'Poppins', sans-serif;
+  color: var(--white);
+}
+
+.intro-text>p {
+  font-size: 0.875em; /* 14px */
+  color: var(--soft-white);
+  padding: 1.439em 0;
+}
+
+.reg-button {
+  font-size: 0.75em; /* 12px */
+  width: 16.667em;
+  height: 3.333em;
+  background: var(--white);
+  border-radius: 4.167em;
+  color: var(--violet);
+  margin: 0.833em;
 }
 
 .fab {
-  width: 1em;
-  height: 1em;
-  text-align: center;
-  color: #fff;
-  padding: 0.625em;
-  border: 0.063em solid #fff;
+  font-size: 0.75em; /* 12px */
+  width: 2.083em;
+  height: 2.083em;
+  color: var(--white);
+  line-height: 2 !important;
+  border: 0.063em solid var(--white);
   border-radius: 3.125em;
-  margin: 2.5em 0.625em;
+  margin: 0 0.333em;
 }
 
 .attribution {
-  font-size: 0.688em;
+  font-size: 0.688em; /* 11px */
+  color: var(--soft-white);
   text-align: center;
+  margin-top: 1.818em;
 }
 
 .attribution a {
-  color: #3E52A3;
-  color: hsl(228, 45%, 44%);
-}
-
-.attribution, .social-icons {
-  display: inline-block;
+  color: var(--soft-magenta);
 }
 
 @media screen and (min-width: 768px) {
