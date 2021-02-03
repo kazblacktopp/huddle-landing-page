@@ -23,7 +23,8 @@
 }
 
 .intro-mockup>img {
-  width: 18.75em;
+  max-width: 100%;
+  /* width: 18.75em; */
 }
 
 .intro-text {
@@ -46,23 +47,16 @@
 
 .reg-button {
   font-size: 0.75em; /* 12px */
-  width: 16.667em;
-  height: 3.333em;
+  padding: 10px 70px;
   background: var(--white);
   border-radius: 4.167em;
   color: var(--violet);
   margin: 0.833em;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
-.fab {
-  font-size: 0.75em; /* 12px */
-  width: 2.083em;
-  height: 2.083em;
-  color: var(--white);
-  line-height: 2 !important;
-  border: 0.063em solid var(--white);
-  border-radius: 3.125em;
-  margin: 0 0.333em;
+.fa-stack {
+  font-size: 0.875em; /* 14px */
 }
 
 .attribution {
