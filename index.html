@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Huddle landing page | Frontend Mentor Challenge | Karen Blacktopp</title>
-  <meta name="description" content="Simple landing page with single introductory section coded with HTML and CSS.">
+  <meta name="description" content="Simple landing page with single introductory section coded using CSS Grid.">
   <meta name="author" content="Karen Blacktopp">
 
   <script src="https://kit.fontawesome.com/10526693e2.js" crossorigin="anonymous"></script>
@@ -28,9 +28,9 @@
   <div class="wrapper">
 
     <!-- Logo Section -->
-    <section class="logo">
-      <img src="images/logo.svg" alt="Huddle">
-    </section>
+    <header class="logo">
+      <h1><img src="images/logo.svg" alt="Huddle"></h1>
+    </header>
     <!-- Logo Section Ends -->
 
     <!-- Main Section -->
@@ -41,10 +41,10 @@
       </figure>
 
       <header class="intro-text">
-        <h1>Build The Community Your Fans Will Love</h1>
+        <h2>Build The Community Your Fans Will Love</h2>
         <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
           Create connections with your users as you engage in genuine discussion.</p>
-        <a href="#?">Register</a>
+        <a href="#">Register</a>
       </header>
 
     </main>
@@ -53,26 +53,35 @@
     <!-- Footer Section -->
     <footer>
 
-      <div class="social-icons">
-        <a href="https://facebook.com">
-          <span class="fa-stack">
-            <i class="far fa-circle fa-stack-2x fa-inverse"></i>
-            <i class="fab fa-facebook-f fa-stack-1x fa-inverse" data-fa-transform="shrink-4"></i>
-          </span>
-        </a>
-        <a href="https://twitter.com">
-          <span class="fa-stack">
-            <i class="far fa-circle fa-stack-2x fa-inverse"></i>
-            <i class="fab fa-twitter fa-stack-1x fa-inverse" data-fa-transform="shrink-4"></i>
-          </span>
-        </a>
-        <a href="https://instagram.com">
-          <span class="fa-stack">
-            <i class="far fa-circle fa-stack-2x fa-inverse"></i>
-            <i class="fab fa-instagram fa-stack-1x fa-inverse" data-fa-transform="shrink-4"></i>
-          </span>
-        </a>
-      </div>
+      <ul class="social-icons">
+        <li>
+          <a href="https://facebook.com">
+            <span class="sr-only">Visit our Facebook Page</span>
+            <span class="fa-stack">
+              <i class="far fa-circle fa-stack-2x fa-inverse"></i>
+              <i class="fab fa-facebook-f fa-stack-1x fa-inverse" data-fa-transform="shrink-4"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com">
+            <span class="sr-only">Visit our Twitter Page</span>
+            <span class="fa-stack">
+              <i class="far fa-circle fa-stack-2x fa-inverse"></i>
+              <i class="fab fa-twitter fa-stack-1x fa-inverse" data-fa-transform="shrink-4"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com">
+            <span class="sr-only">Visit our Instagram Page</span>
+            <span class="fa-stack">
+              <i class="far fa-circle fa-stack-2x fa-inverse"></i>
+              <i class="fab fa-instagram fa-stack-1x fa-inverse" data-fa-transform="shrink-4"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
 
       <p class="attribution">
         <small>
