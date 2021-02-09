@@ -3,7 +3,8 @@
   --violet: hsl(257, 40%, 49%);
   --white: hsla(0, 0%, 100%, 0.9);
   --soft-white: hsla(0, 0%, 100%, 0.7);
-  --shadow: 3rem 4rem 10rem #222; /* 1rem = 1px (see typography.css) */
+  --shadow: 1.5rem 2rem 10rem #222;
+  /* 1rem = 1px (see typography.css) */
 }
 
 body {
@@ -41,19 +42,22 @@ body {
   display: grid;
   grid-gap: 1.25em;
   padding: 2.188em 0;
-  line-height: 1.6;
+  line-height: 1.5;
   letter-spacing: 0.031em;
   justify-items: center;
 }
 
 .intro-text h2 {
-  font-size: 23rem;
+  /* min font-size: 23px at 375px viewport width, max font-size: 40px at
+     1440px width using linear interpolation */
+  font-size: clamp(23rem, 17.01rem + 1.597vw, 40rem);
   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   color: var(--white);
 }
 
 .intro-text p {
-  font-size: 15rem;
+  font-size: clamp(15rem, 14.3rem + 0.1875vw, 17rem);
   color: var(--soft-white);
 }
 
@@ -67,9 +71,15 @@ body {
   align-self: center;
 }
 
+.intro-text a, .fa-facebook-f, .fa-twitter, .fa-instagram, .attribution a:hover {
+  transition: all 0.3s ease 0s;
+}
+
 .intro-text a:hover {
   background: var(--soft-magenta);
   color: var(--white);
+  box-shadow: 2rem 4rem 10rem #222;
+  transform: scale(1.05);
 }
 
 footer {
@@ -80,17 +90,39 @@ footer {
   display: inline-block;
 }
 
-.fa-stack {
-  font-size: 14rem;
+.fa-facebook-f, .fa-twitter, .fa-instagram {
+  border: 0.0625em solid #fff;
+  height: 1.5625em;
+  width: 1.5625em !important;
+  border-radius: 50%;
+  padding: 0.375em;
+  margin: 0.0625em 0.3125em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-facebook-f:hover, .fa-twitter:hover, .fa-instagram:hover {
+  color: var(--soft-magenta);
+  border-color: var(--soft-magenta);
+  box-shadow: 1rem 3rem 5rem #222;
+  transform: scale(1.2);
 }
 
 .attribution {
-  font-size: 11rem;
+  font-size: 12rem;
   color: var(--soft-white);
 }
 
 .attribution a {
+  display: inline-block;
   color: var(--soft-magenta);
+  margin: 0 2rem;
+}
+
+.attribution a:hover {
+  text-shadow: 1rem 3rem 5rem #222;
+  transform: scale(1.1);
 }
 
 @media (min-width: 900px) {
@@ -118,17 +150,8 @@ footer {
   .intro-text {
     justify-items: start;
     text-align: left;
-    padding: 2.814em 0 11.25em;
-  }
-
-  .intro-text h2 {
-    font-size: 40rem;
-    font-weight: 700;
-    line-height: 1.4;
-  }
-
-  .intro-text p {
-    font-size: 17rem;
+    padding-top: clamp(0rem, -75.132rem + 8.348vw, 45rem);
+    padding-bottom: clamp(40rem, -177.07rem + 24.1021vw, 180rem);
   }
 
   .intro-text a {
@@ -138,5 +161,12 @@ footer {
 
   .social-icons {
     text-align: right;
+  }
+
+  .fa-facebook-f, .fa-twitter, .fa-instagram {
+    height: 2.5em;
+    width: 2.5em !important;
+    padding: 0.6em;
+    margin: 0 0.3125em;
   }
 }
